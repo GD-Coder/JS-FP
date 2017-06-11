@@ -1,0 +1,33 @@
+{
+  "name": "JavaScript-FP",
+  "version": "1.0.0",
+  "description": "javascript assignments",
+  "main": "build/main.js",
+  "repository": "https://github.com/GD-Coder/js-assignments.git",
+  "author": "GDCoder",
+  "license": "MIT",
+  "scripts": {
+    "build": "babel src/ -d src/",
+    "prestart": "yarn build",
+    "start": "node .",
+    "repl": "babel-node"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-eslint": "^7.2.3",
+    "babel-plugin-transform-es2015-arrow-functions": "^6.22.0",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-env": "^1.5.2",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "flow-bin": "^0.47.0",
+    "standard": "^10.0.2"
+  },
+  "standard": {
+    "parser": "babel-eslint"
+  },
+  "dependencies": {
+    "array-flatten": "^2.1.1"
+  }
+}
