@@ -3,10 +3,10 @@
 const fs = require('fs')
 
 class Employee {
-  constructor (emp) {
-    this.name = emp.name
-    this.title = emp.title
-    this.salary = emp.salary
+  constructor (employee) {
+    this.name = employee.name
+    this.title = employee.title
+    this.salary = employee.salary
   }
   promote (title, salary) {
     this.title = title
@@ -14,8 +14,7 @@ class Employee {
   }
 }
 Employee.parseFromFilePath = function (filePath) {
-  let emp = new Employee(JSON.parse(fs.readFileSync(filePath, 'utf-8')))
-  return emp
+  return new Employee(JSON.parse(fs.readFileSync(filePath)))
 }
 module.exports = {
   Employee
