@@ -1,6 +1,7 @@
 'use strict'
 
 const util = require('util')
+const _ = require('lodash')
 
 const {
   listing,
@@ -40,19 +41,12 @@ const entries =
   obj =>
     Object.keys(obj)
       .map(key => [key, obj[key]])
-// let testItems = []
-let result3 = []
 
-
-// const items = listings.map(listing)
-// const itemList = items.map(item => item.name)
 const stuff = customers.map((customer) => customer.shoppingList)
-// const name = customers.map((customer) => customer.name)
 const shoppingList = stuff.map(entries)
-const tester = itemRepeater(shoppingList[0][0][0], shoppingList[0][0][1])
-// const test = customers.map(customer).filter(custom => result.push(custom.name, custom.shoppingList))
-// const test2 = test.map(custom => custom.name.shoppingList)
+const tester = null
 const carts = constructCarts(listings)
+
 carts(customers)
   .forEach(cart => console.log(`${cart.name}, your cart contains ${util.inspect(cart.shoppingList)}`))
 console.log(tester)
